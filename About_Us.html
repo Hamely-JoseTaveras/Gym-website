@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<title>HJ Fitness House</title>
+<head>
+
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://lh3.googleusercontent.com/iN2Dkn4l9yoWKx0FMcIi2_1qzfa0MK_BKzeH7IC__wwMhO1vfOLBBangUteiJnIgpbV7AiEHc3mbhXNDLMJOaYAuH_9midBGd4fCI_P0=h200");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 66%;
+  padding: 20px;
+  
+}
+
+
+
+
+
+
+
+<!-- Side Menu-->
+
+body {
+  font-family: "SimKai";
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1E1E1E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #00e64d;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+H2{color: pink}
+
+</style>
+
+
+</head>
+<body>
+
+
+<!-- Side Menu-->
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html" style= "font-family: 'SimKai'">Home</a>
+  <a href="About_Us.html" style= "font-family: 'SimKai'">About Us</a>
+  <a href="MembershipPlans.html" style= "font-family: 'SimKai'">Plans</a>
+  <a href="SignUpForm.html" style= "font-family: 'SimKai'">Sign up!!!</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer; font-family: 'SimKai' color: #1E1E1E" onclick="openNav()">&#9776; Open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+
+
+
+<!-- blurred intro image-->
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+
+
+  <h1 style="font-size:40px; font-family: 'SimKai'"> HJ Fitness House</h1>
+   <a href="https://imgbox.com/Gk39uruQ" target="_blank"><img src="https://thumbs2.imgbox.com/13/63/Gk39uruQ_t.jpeg" alt="image host" wigth= 100 height=250 /></a>
+  
+   <p>
+   CEO Hamely Jose Taveras  is a 18 y/o college student. She understand that going to the gym can be more then just staying healthy , for some people the gym can be a  way of relaxing, deal with mental health and physical health. She wanted to make sure everyone have a safe and confortable space at the gym, which led her to built HJ Fitness house. 
+   </p>
+   <img src="https://st2.depositphotos.com/3927429/8215/i/600/depositphotos_82158134-stock-photo-athletic-man-and-woman-with.jpg" alt="Girl in a jacket" width="400" height="250">
+  <p style= " font-size:20px; font-family: 'SimKai'"> We understand that picking the right gym is very important staying  healthy and active. That is why we provide different classes that can fit you best. Our mission is to make your life easier while trying to stay active by providing high fitness quality, judgement free, and confotable enviroment. We provide 200+ different machines and 3 different locations that can suit you best. </p>
+  
+ 
+ <h2>
+Policies
+</h2>
+
+
+<ol>
+<li>Respect each other </li>
+<li>Be mindful of your surroundings.</li>
+<li> Clean up after yourself </li>
+<li>Personal space: respect it.</li>
+<li> Don’t hog the equipment.</li>
+<li> Selfies: Try to be discreet about them.</li>
+<li>Put your weights back.</li>
+<li>Keep the equipment where it belongs.</li>
+<li>Do not interrupt other</li>
+
+</ol>
+ 
+
+ 
+ 
+<hr>
+
+ <div class="row">
+  <div class="column">
+    <img src="https://titleboxingclub.com/wp-content/uploads/2018/10/man-boxing.jpg" alt="boxing" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://p300-americantownscom.netdna-ssl.com/img/article/az-zumba-1.jpg" alt="Aerobic class" style="width:100%">
+    <img src="https://blogs.constantcontact.com/wp-content/uploads/2021/01/Social-16.jpg" alt="Personal training" style= "width:100%">
+    
+
+  </div>
+  <div class="column">
+    <img src="https://i0.wp.com/quantumsf.org/wp-content/uploads/2016/10/adults_feature_1920w.jpg?fit=1920%2C1161&ssl=1" alt="karate" style="width:100%">
+    <img src="https://media.istockphoto.com/photos/asian-yoga-students-observing-and-practicing-during-class-picture-id1324181858?b=1&k=20&m=1324181858&s=170667a&w=0&h=HDyD7lT-s8rNKE9eUuGHkJYWrVHxraLylgFSqkWBeF0=" alt="yoga" style= "width:100%"></div>
+
+
+  
+
+  
+
+
+</div>
+</div>
+</body>
+</html>

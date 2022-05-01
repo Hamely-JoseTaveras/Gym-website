@@ -1,0 +1,185 @@
+<!<!doctype html>
+<html>
+<title>HJ Fitness House</title>
+<head>
+
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/10/12/15/performixhouse-floor1018.jpg?width=640");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 76%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+<!-- Side Menu-->
+
+body {
+  font-family: "SimKai";
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1E1E1E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #00e64d;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<!-- Side Menu-->
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html" style= "font-family: 'SimKai'">Home</a>
+  <a href="About_us.html" style= "font-family: 'SimKai'">About Us</a>
+  <a href="MembershipPlans.html" style= "font-family: 'SimKai'"> Membership Plans</a>
+  <a href="SignUpForm.html" style= "font-family: 'SimKai'">Sign up!!!</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer; font-family: 'SimKai' color: #1E1E1E" onclick="openNav()">&#9776; Open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+
+
+
+<!-- blurred intro image-->
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1 style="font-size:50px; font-family: 'SimKai'"> Membership Plans </h1>
+  <img src="https://www.purebredfitness.com.au/wp-content/uploads/2020/08/purebred-fitness-promo-video.jpg" alt="gym" width="400" height="260">
+  <p style= "font-family: 'SimKai'"> We belive that choosing the right space to work on your health and fitness goal is very imporant. Our goal is to provide you with a safe, confortable and enjoyabe place that is why we provide about 300+ different machines equiptments and plans.  </p>
+<hr>
+
+<font color="black">
+<table style="font-family:helvetica;" class = center width="500" border="5"  cellpadding = "3" cellspacing = "1"   bgcolor = "white" >
+<tr> <th> Classic </th> <th> Core</th> <th> Exclusive Green </th></tr>
+<tr> <td>  $24.99/mo</td> <td> Super $29.99/mo </td> <td> Ultra $39.99/mo </td></tr>
+  
+  <tr> <td style="text-align:center"> No commitment </td> <td style="text-align:center"> 12 Month Commitment </td> <td style="text-align:center"> No Commitment </td></tr>
+    
+    <tr> <td style="text-align:center"> Home Club Access Only </td> <td style="text-align:center"> 2 Borough Access </td> <td style="text-align:center"> City Wide Access </td></tr>
+      
+      <tr> <td style="text-align:center"> Fitness Assessment Included </td> <td style="text-align:center"> Fitness Assessment Included </td> <td style="text-align:center"> Meal Planning </td></tr>
+        
+        <tr> <td style="text-align:center">  Access to all special classes</td> <td style="text-align:center"> Amenities Inlcuded </td> <td style="text-align:center"> Access to Spa </td></tr>
+          
+          <tr> <td style="text-align:center"> </td> <td style="text-align:center"> 1 Guest Pass </td> <td style="text-align:center"> 2 Guest Passes </td></tr>
+            
+							<tr> <td style="text-align:center"> </td> <td style="text-align:center"> Access To All Special Class </td> <td style="text-align:center"> 1 FREE Monthly Boxing Class</td>
+              </tr>
+
+</table>
+</font>
+</div>
+</body>
+</html>

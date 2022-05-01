@@ -1,0 +1,631 @@
+<!doctype html>
+<html>
+<title>HJ Fitness House</title>
+<head>
+<script>
+
+function doClear() {
+	document.signup.fnInfo.value = "";
+	document.signup.lnInfo.value = "";
+	document.signup.streetAddress.value = "";
+	document.signup.streetAddress2.value = "";
+	document.signup.city.value = "";
+	document.signup.zipInfo.value = "";
+	document.signup.email.value = "";
+	document.signup.phoneNumber.value = "";
+	document.signup.fnPayment.value = "";
+	document.signup.lnPayment.value = "";
+	document.signup.creditCard.value = "";
+	document.signup.zipPayment.value = "";
+  
+ document.signup.activity[0].checked = false;
+ document.signup.activity[1].checked = false;
+ document.signup.activity[2].checked = false;
+ document.signup.activity[3].checked = false;
+ document.signup.activity[4].checked = false;
+ document.signup.activity[5].checked = false;
+ document.signup.activity[6].checked = false;
+ document.signup.activity[7].checked = false;
+ document.signup.activity[8].checked = false;
+
+
+var dropDown= document.getElementById("state");
+dropDown.selectedIndex = "0";
+var dropDown= document.getElementById("months");
+dropDown.selectedIndex = "0";
+var dropDown= document.getElementById("Day");
+dropDown.selectedIndex = "0";
+var dropDown= document.getElementById("Years");
+dropDown.selectedIndex = "0";
+var dropDown= document.getElementById("Know");
+dropDown.selectedIndex = "0";
+var dropDown= document.getElementById("Cmonths");
+dropDown.selectedIndex = "0";
+var dropDown= document.getElementById("CYear");
+dropDown.selectedIndex = "0";
+
+
+	document.signup.card[0].checked = false;
+	document.signup.card[1].checked = false;
+
+
+	document.signup.location[0].checked = false;
+	document.signup.location[1].checked = false;
+	document.signup.location[2].checked = false;
+	document.signup.plan[0].checked = false;
+	document.signup.plan[1].checked = false;
+	document.signup.plan[2].checked = false;
+	
+
+	document.signup.terms[0].checked = false;
+	document.signup.terms[1].checked = false;
+	
+}
+
+function doSubmit() {
+	if (validateRadio3() == false)
+	{
+		alert("Please agree to terms.");
+		return;
+	}
+	alert("Thank you");
+	var fnInfo = document.signup.fnInfo.value;
+	if(fnInfo.length == 0)
+	{
+		alert("Please enter your first name.");
+		return;
+	}
+
+	var lnInfo = document.signup.lnInfo.value;
+	if(lnInfo.length == 0)
+	{
+		alert("Please enter your last name.");
+		return;
+	}
+
+	var streetAddress = document.signup.streetAddress.value;
+	if(streetAddress.length == 0)
+	{
+		alert("Please enter your address.");
+		return;
+	}
+
+	var city = document.signup.city.value;
+	if(city.length == 0)
+	{
+		alert("Please enter your city.");
+		return;
+	}
+
+	var zipInfo = document.signup.zipInfo.value;
+	if(zipInfo.length == 0)
+	{
+		alert("Please enter your zip code.");
+		return;
+	}
+
+	var email = document.signup.email.value;
+	if(email.length == 0)
+	{
+		alert("Please enter your email.");
+		return;
+	}
+
+	var phoneNumber = document.signup.phoneNumber.value;
+	if(phoneNumber.length == 0)
+	{
+		alert("Please enter your phone number.");
+		return;
+	}
+
+	var fnPayment = document.signup.fnPayment.value;
+	if(fnPayment.length == 0)
+	{
+		alert("Please enter your card number.");
+		return;
+	}
+
+	var lnPayment = document.signup.lnPayment.value;
+	if(lnPayment.length == 0)
+	{
+		alert("Please enter your card number.");
+		return;
+	}
+
+	var creditCard = document.signup.creditCard.value;
+	if(creditCard.length == 0)
+	{
+		alert("Please enter your card number.");
+		return;
+	}
+
+	var zipPayment = document.signup.zipPayment.value;
+	if(zipPayment.length == 0)
+	{
+		alert("Please enter your card number.");
+		return;
+	}
+	var check = document.getElementBYId("state");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select state in member information.");
+		return;
+	}
+	var check = document.getElementBYId("months");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select months for D.O.B in member information");
+		return;
+	}
+	var check = document.getElementBYId("Day");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select day for D.O.B in member information");
+		return;
+	}
+	var check = document.getElementBYId("Years");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select years for D.O.B in member information.");
+		return;
+	}
+	var check = document.getElementBYId("know");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select how you heared about us member information.");
+		return;
+	}
+	var check = document.getElementBYId("Cmonths");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select month in payments information.");
+		return;
+	}
+	var check = document.getElementBYId("CYear");
+	if (check.selectedIndex == 0)
+	{
+	alert("Please select year in payment information.");
+		return;
+	}
+	if (validateRadio2() == false)
+	{
+		alert("Please select a plan.");
+		return;
+	}
+	if (validateRadio1() == false)
+	{
+		alert("Please select a location.");
+		return;
+	}
+	
+	
+	return;
+      
+
+}
+
+function validateRadio1() {
+	if(document.signup.location[0].checked) return true;
+	if(document.signup.location[1].checked) return true;
+	if(document.signup.location[2].checked) return true;
+	
+	return false;
+}
+function validateRadio2() {
+	if(document.signup.plan[0].checked) return true;
+	if(document.signup.plan[1].checked) return true;
+	if(document.signup.plan[2].checked) return true;
+	return false;
+}
+function validateRadio3() {
+	if(document.signup.terms[0].checked && document.signup.terms[1].checked) return true;
+	return false;
+}	
+</script>
+
+<style>
+h2 {color: #ff1a75}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+<!-- Side Menu-->
+
+body {
+  font-family: "SimKai";
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1E1E1E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav a:hover {
+  color: #00e64d;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+   input[type=text]:hover
+{
+  width: 50%;/* to change the width of the boxes*/
+  border: 2px /* border size*/solid #ff1a75;
+ /*it can be soli , dash,dotted in the b order*/
+  background-color: #ffe6f0;
+  size:"9";/*size of text*/
+}
+input[type=button], select 
+{
+  width: 60%;/* to change the width of the boxes*/
+  border: 2px /* border size*/solid #ff1a75;
+ /*it can be soli , dash,dotted in the b order*/
+  background-color: #ffe6f0;
+  /* text color*/ color: black;
+  /* curve edges*/ border-radius: 4px;
+  
+}
+input[type= button]:hover
+{
+  width: 60%;/* to change the width of the boxes*/
+  border: 2px /* border size*/solid black ;
+ /*it can be soli , dash,dotted in the b order*/
+  background-color: #ff4d94;
+  size:"9";/*size of text*/
+}
+
+
+div.a {text-align: center;}
+div.b {text-align: center;}
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.myDiv {
+        
+        background-color:white;
+        border: 2px  solid black;
+        margin: auto;
+        width: 55%;
+        padding: 10px;
+      }
+
+</style>
+
+
+</head>
+<body style="Background-image:url('https://media.timeout.com/images/105689091/image.jpg');"atl="pink flowvers and pink background image"  >
+
+
+<!-- Side Menu-->
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html" style= "font-family: 'SimKai'">Home</a>
+  <a href="About_Us.html" style= "font-family: 'SimKai'">About Us</a>
+  <a href="MembershipPlans.html" style= "font-family: 'SimKai'">Plans</a>
+  <a href="SignUpForm.html" style= "font-family: 'SimKai'">Sign up!!!</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer; font-family: 'SimKai' color: #1E1E1E" onclick="openNav()">&#9776; Open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+
+</script>
+
+
+
+
+<!-- blurred intro image-->
+
+<div class="myDiv">
+
+
+
+<div class = "a"> <br>
+  <h1 style="font-size:50px; font-family: 'SimKai'"> HJ Fitness House</h1>
+  <img src="https://static01.nyt.com/images/2020/01/06/well/04run-gym/04run-gym-superJumbo.jpg" alt="Girl in a jacket" width="400" height="250">
+  <p style= "font-family: 'SimKai'"> Where we provided a enjoyable, safe, and judgement free zone for anyone that enters our beautiful door. We want you to feel confortable while trying to stay active and achive your fitness goals.</p>
+<hr>
+<h2 id="blink" ><center>Please enter your information!!</center></h2>
+<script type="text/javascript">
+        var blink = document.getElementById('blink');
+        setInterval(function() {
+        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 800);
+</script>
+</div>
+<style>
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+</style>
+
+<form name = "signup">
+
+<!-- <img src= "https://wallpapercave.com/wp/wp1874155.jpg"
+alt = "indoor seats" height = 670 style="float:right";>
+Maybe add a picture if space allows? -->
+
+
+<br>
+<ol>
+
+
+
+<li> <h2>Select your plan</h2></li>
+<input name = "plan" type = "radio"> Student
+<input name = "plan" type = "radio"> Classic
+<input name = "plan" type = "radio"> Student <br>
+
+</p>
+
+<br>
+
+<li><h2> Member Information </h2></li>  <br>
+<input name = "fnInfo" type = "text" placeholder="First Name" maxlength="15" style="width:250px">
+<input name = "lnInfo" type = "text" placeholder="Last Name" maxlength="15" style="width:250px"/> <br><br>
+<input name = "streetAddress" type = "text" placeholder = "Street Address" style="width:250px"/>
+<input name = "streetAddress2" type = "text" placeholder = "Apt, Suite, Building (Optional)" maxlength = "5" style="width:250px"/> <br><br>
+<input name = "city" type = "text" placeholder = "City" maxlength = "30" style="width:190px"/>
+<select id = "state">
+	<option> State </option>
+	<option> NJ </option>
+	<option> CT </option>
+	<option> PA </option>
+	<option> NY </option>
+
+</select>
+<input name = "zipInfo" type = "tel" placeholder = "Zip" pattern="0-9" min ="0" max="5" maxlength = "5" style="width:243px"/> <br><br>
+<input name = "email" type="text" placeholder="Email" maxlength="50" style="width:250px"/>
+<input name = "phoneNumber" type= "tel" placeholder= "Phone Number" pattern="0-9" min ="0" max="10" maxlength="10" style="width:250px"/> <br><br>
+<p> Please enter your D.O.B</p>
+<select id = "months">
+	<option> Month </option>
+	<option> January </option>
+	<option> Feburary </option>
+	<option> March </option>
+	<option> April </option>
+	<option> May </option>
+	<option> June </option>
+	<option> July </option>
+	<option> August </option>
+	<option> September </option>
+	<option> October </option>
+	<option> November </option>
+	<option> December </option>
+</select>
+<select id = "Day">
+	<option> Day </option>
+	<option> 01 </option>
+	<option> 02 </option>
+	<option> 03 </option>
+	<option> 04 </option>
+	<option> 05 </option>
+	<option> 06 </option>
+	<option> 07 </option>
+	<option> 08 </option>
+	<option> 09 </option>
+	<option> 10 </option>
+	<option> 11 </option>
+	<option> 12 </option>
+	<option> 13 </option>
+	<option> 14 </option>
+	<option> 15 </option>
+	<option> 16 </option>
+	<option> 17 </option>
+	<option> 18 </option>
+	<option> 19 </option>
+	<option> 20 </option>
+	<option> 21 </option>
+	<option> 22 </option>
+	<option> 23 </option>
+	<option> 24 </option>
+	<option> 25 </option>
+	<option> 26 </option>
+	<option> 27 </option>
+	<option> 28 </option>
+	<option> 29 </option>
+	<option> 30 </option>
+	<option> 31 </option>
+</select>
+<select id = "Years">
+	<option> Year </option>
+	<option> 2003 </option>
+	<option> 2002 </option>
+	<option> 2001 </option>
+	<option> 2000 </option>
+	<option> 1999 </option>
+	<option> 1998 </option>
+	<option> 1997 </option>
+	<option> 1996 </option>
+	<option> 1995 </option>
+	<option> 1994 </option>
+	<option> 1993 </option>
+	<option> 1992 </option>
+	<option> 1991 </option>
+	<option> 1990 </option>
+	<option> 1989 </option>
+	<option> 1988 </option>
+	<option> 1987 </option>
+	<option> 1986 </option>
+	<option> 1985 </option>
+	<option> 1984 </option>
+	<option> 1983 </option>
+	<option> 1982 </option>
+	<option> 1981 </option>
+	<option> 1980 </option>
+	<option> 1979 </option>
+	<option> 1978 </option>
+	<option> 1977 </option>
+	<option> 1976 </option>
+	<option> 1975 </option>
+	<option> 1974 </option>
+	<option> 1973 </option>
+	<option> 1972 </option>
+	<option> 1971 </option>
+	<option> 1970 </option>
+	<option> 1969 </option>
+	<option> 1968 </option>
+	<option> 1967 </option>
+	<option> 1966 </option>
+	<option> 1965 </option>
+	<option> 1964 </option>
+	<option> 1963 </option>
+	<option> 1962 </option>
+	<option> 1961 </option>
+	<option> 1960 </option>
+	<option> 1959 </option>
+	<option> 1958 </option>
+	<option> 1957 </option>
+	
+</select>
+<select id = "Know">
+	<option> How'd you hear about us? </option>
+	<option> Ad</option>
+	<option> Newspaper </option>
+	<option> Online Advertisment </option>
+	<option> Friend</option>
+	<option> Mail </option>
+	<option> Social Media </option>
+	<option> Walk-In </option>
+	<option> Magazine</option> 
+</select>
+
+<br><br><br>
+
+<li><h2>Payment Information </h2></li> <br><br>
+<input name = "card" type = "radio"> Debit Card 
+<input name = "card" type = "radio"> Credit Card  <br><br>
+<input name = "fnPayment" type = "text" placeholder = "First Name" style = "width: 250px"/>
+<input name = "lnPayment" type = "text" placeholder = "Last Name" style = "width: 250px"/> <br><br>
+<input name = "creditCard" type = "tel" placeholder = "Card Number (Please only enter number)" pattern="0-9" min ="0" max="10" maxlength="16" style = "width: 505px"/> <br><br>
+<select id = "Cmonths">
+	<option> Month </option>
+	<option> January </option>
+	<option> Feburary </option>
+	<option> March </option>
+	<option> April </option>
+	<option> May </option>
+	<option> June </option>
+	<option> July </option>
+	<option> August </option>
+	<option> September </option>
+	<option> October </option>
+	<option> November </option>
+	<option> December </option>
+</select>
+<select id = "CYear">
+	<option> Year </option>
+	<option> 2021 </option>
+	<option> 2022 </option>
+	<option> 2023 </option>
+	<option> 2024 </option>
+	<option> 2025 </option>
+	<option> 2026 </option>
+	
+</select>
+<input name = "zipPayment" type = "tel" placeholder = "Zip Code" pattern="0-9" min ="0" max="5" maxlength="5"/> <br><br>
+
+<br>
+
+	<li> <h2>Select your Location </h2></li> <br><br>
+  <div class = "b">
+	<table style="font-family:helvetica;" class = "center" width="660" border="5">
+  <tr> <th> Brooklyn, NY </th> <th> Manhattan, NY </th> <th> Bronx, NY </th></tr>
+    <tr> <td style="text-align:center"> Open 24 hours</td> <td style="text-align:center"> Open 24 hours </td> <td style="text-align:center"> Open 7:00AM - 10:00PM </td></tr>
+      <tr> <td style="text-align:center"> 123 Jay st </td> <td style="text-align:center"> 456 3 ave </td> <td style="text-align:center"> 789 Boston Road </td></tr>
+        <tr> <td style="text-align:center"> 718-123-4567</td> <td style="text-align:center"> 718-567-8932</td> <td style="text-align:center"> 718-987-6543 </td></tr>
+          <tr> <td> <input name = "location" type = "radio"> </td> <td> <input name = "location" type = "radio"> </td> <td> <input name = "location" type = "radio"> </td></tr>
+	</table>
+  </div>
+  <br>
+  <li><h2>Select any activity available </h2></li>
+<p>
+<input name = "activity" type = "checkbox"> Zumba
+<input name = "activity" type = "checkbox"> Boxing
+<input name = "activity" type = "checkbox"> Yoga <br>
+<input name = "activity" type = "checkbox"> karate
+<input name = "activity" type = "checkbox"> Stretching
+<input name = "activity" type = "checkbox"> Aerobic exercies<br>
+<input name = "activity" type = "checkbox"> Meal plan 
+<input name = "activity" type = "checkbox"> Sport Training
+<input name = "activity" type = "checkbox"> personal trainer
+</p>
+<br>
+<br>
+<input name = "terms" type= "checkbox" font-family="helvetica"> I agree to the Terms and Conditions of this agreement. <br><br>
+<input name = "terms" type= "checkbox"> I have read and agree to the Payment Conditions of this agreement. <br><br> <!-- Need to fix the checkboxes not clearing when hitting the clear entries button-->
+
+
+
+
+<input type = "button" value = "Sign Up!" onClick = "doSubmit()">
+<input type = "button" value = "Clear Entries" onClick = "doClear()">
+</ol>
+
+
+</form>
+</div>
+
+
+</body>
+</html>
